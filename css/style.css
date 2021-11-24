@@ -19,6 +19,34 @@ input {
     padding-right: 5%;
 }
 
+table {
+    width: 100%;
+}
+
+tr {
+    padding: 1%;
+    text-align: center;
+}
+
+th {
+    padding: 1%;
+    text-align: center;
+}
+
+td {
+    padding: 1%;
+    text-align: center;
+}
+
+.gris {
+    background-color: #f8f8f8;
+}
+
+.blue {
+    background-color: #408bc9;
+    color: white;
+}
+
 
 /* For mobile phones: */
 

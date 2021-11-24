@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-11-2021 a las 16:05:40
+-- Tiempo de generación: 24-11-2021 a las 18:04:03
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.24
 
@@ -34,8 +34,16 @@ CREATE TABLE `tbl_admin` (
   `nombre_admin` varchar(50) NOT NULL,
   `apellido_admin` varchar(50) NOT NULL,
   `correo_admin` varchar(50) NOT NULL,
-  `pass_admin` varchar(20) NOT NULL
+  `pass_admin` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tbl_admin`
+--
+
+INSERT INTO `tbl_admin` (`id_admin`, `nombre_admin`, `apellido_admin`, `correo_admin`, `pass_admin`) VALUES
+(1, 'Diego', 'Soledispa', 'diegosoledispa@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+(2, 'Cristian', 'Guerrero', 'cristianguerrero@gmail.com', '1234');
 
 -- --------------------------------------------------------
 
@@ -51,6 +59,15 @@ CREATE TABLE `tbl_evento` (
   `fecha_final_evento` date NOT NULL,
   `descripcion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tbl_evento`
+--
+
+INSERT INTO `tbl_evento` (`id_evento`, `nombre_evento`, `lugar_evento`, `fecha_inicio_evento`, `fecha_final_evento`, `descripcion`) VALUES
+(3, 'Campaña recogida alimentos', 'Ermita Bellvitge', '2021-11-25', '2021-11-28', 'Campaña recogida alimentos 2021'),
+(4, 'Cursa solidaria', 'Feixa Llarga', '2021-11-26', '2021-11-29', 'Cursa solidaria 2021'),
+(5, 'Campaña donacion sangre', 'Av europa', '2021-11-27', '2021-12-01', 'Campaña donacion sangre 2021');
 
 -- --------------------------------------------------------
 
@@ -79,6 +96,15 @@ CREATE TABLE `tbl_voluntario` (
   `edad_voluntario` int(3) NOT NULL,
   `telf_voluntario` int(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tbl_voluntario`
+--
+
+INSERT INTO `tbl_voluntario` (`id_voluntario`, `nombre_voluntario`, `apellido_voluntario`, `correo_voluntario`, `dni_voluntario`, `edad_voluntario`, `telf_voluntario`) VALUES
+(1, 'Carlos', 'Piedras', 'carlospiedras@gmail.com', '42757394V', 21, 646735753),
+(2, 'Miquel', 'Gras', 'miquelgras@gmail.com', '42757386R', 20, 646739453),
+(3, 'Pepe', 'Garcia', 'pepegarcia@gmail.com', '57846735N', 50, 743456324);
 
 --
 -- Índices para tablas volcadas
@@ -118,13 +144,13 @@ ALTER TABLE `tbl_voluntario`
 -- AUTO_INCREMENT de la tabla `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_evento`
 --
 ALTER TABLE `tbl_evento`
-  MODIFY `id_evento` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_evento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_evento_voluntario`
@@ -136,7 +162,7 @@ ALTER TABLE `tbl_evento_voluntario`
 -- AUTO_INCREMENT de la tabla `tbl_voluntario`
 --
 ALTER TABLE `tbl_voluntario`
-  MODIFY `id_voluntario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_voluntario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
