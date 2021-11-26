@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2021 a las 18:04:03
+-- Tiempo de generación: 26-11-2021 a las 16:04:21
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.24
 
@@ -57,17 +57,18 @@ CREATE TABLE `tbl_evento` (
   `lugar_evento` varchar(50) NOT NULL,
   `fecha_inicio_evento` date NOT NULL,
   `fecha_final_evento` date NOT NULL,
-  `descripcion` text NOT NULL
+  `descripcion` text NOT NULL,
+  `capacidad_evento` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tbl_evento`
 --
 
-INSERT INTO `tbl_evento` (`id_evento`, `nombre_evento`, `lugar_evento`, `fecha_inicio_evento`, `fecha_final_evento`, `descripcion`) VALUES
-(3, 'Campaña recogida alimentos', 'Ermita Bellvitge', '2021-11-25', '2021-11-28', 'Campaña recogida alimentos 2021'),
-(4, 'Cursa solidaria', 'Feixa Llarga', '2021-11-26', '2021-11-29', 'Cursa solidaria 2021'),
-(5, 'Campaña donacion sangre', 'Av europa', '2021-11-27', '2021-12-01', 'Campaña donacion sangre 2021');
+INSERT INTO `tbl_evento` (`id_evento`, `nombre_evento`, `lugar_evento`, `fecha_inicio_evento`, `fecha_final_evento`, `descripcion`, `capacidad_evento`) VALUES
+(3, 'Campaña recogida alimentos', 'Ermita Bellvitge', '2021-11-25', '2021-11-28', 'Campaña recogida alimentos 2021', 0),
+(4, 'Cursa solidaria', 'Feixa Llarga', '2021-11-26', '2021-11-29', 'Cursa solidaria 2021', 0),
+(5, 'Campaña donacion sangre', 'Av europa', '2021-11-27', '2021-12-01', 'Campaña donacion sangre 2021', 0);
 
 -- --------------------------------------------------------
 
@@ -94,17 +95,18 @@ CREATE TABLE `tbl_voluntario` (
   `correo_voluntario` varchar(50) NOT NULL,
   `dni_voluntario` varchar(9) NOT NULL,
   `edad_voluntario` int(3) NOT NULL,
-  `telf_voluntario` int(9) NOT NULL
+  `telf_voluntario` int(9) NOT NULL,
+  `habilitado_voluntario` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tbl_voluntario`
 --
 
-INSERT INTO `tbl_voluntario` (`id_voluntario`, `nombre_voluntario`, `apellido_voluntario`, `correo_voluntario`, `dni_voluntario`, `edad_voluntario`, `telf_voluntario`) VALUES
-(1, 'Carlos', 'Piedras', 'carlospiedras@gmail.com', '42757394V', 21, 646735753),
-(2, 'Miquel', 'Gras', 'miquelgras@gmail.com', '42757386R', 20, 646739453),
-(3, 'Pepe', 'Garcia', 'pepegarcia@gmail.com', '57846735N', 50, 743456324);
+INSERT INTO `tbl_voluntario` (`id_voluntario`, `nombre_voluntario`, `apellido_voluntario`, `correo_voluntario`, `dni_voluntario`, `edad_voluntario`, `telf_voluntario`, `habilitado_voluntario`) VALUES
+(1, 'Carlos', 'Piedras', 'carlospiedras@gmail.com', '42757394V', 21, 646735753, 0),
+(2, 'Miquel', 'Gras', 'miquelgras@gmail.com', '42757386R', 20, 646739453, 0),
+(3, 'Pepe', 'Garcia', 'pepegarcia@gmail.com', '57846735N', 50, 743456324, 0);
 
 --
 -- Índices para tablas volcadas
