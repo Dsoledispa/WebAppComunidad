@@ -9,7 +9,7 @@ if ($_SESSION['email']=="") {
     $fecha_inicio_evento=$_POST['fecha_inicio_evento'];
     $fecha_final_evento=$_POST['fecha_final_evento'];
     $descripcion=$_POST['descripcion'];
-    $agregar=$pdo->prepare("INSERT INTO tbl_evento ( nombre_evento, lugar_evento, fecha_inicio_evento, fecha_final_evento, descripcion) VALUES ('{$nombre_evento}', '{$lugar_evento}', '{$fecha_inicio_evento}', '{$fecha_final_evento}', '{$descripcion}');");
+    $agregar=$pdo->prepare("INSERT INTO tbl_evento (nombre_evento, lugar_evento, fecha_inicio_evento, fecha_final_evento, descripcion) VALUES ('{$nombre_evento}', '{$lugar_evento}', '{$fecha_inicio_evento}', '{$fecha_final_evento}', '{$descripcion}');");
     try {
         $agregar->execute();
         if (empty($agregar)) {
