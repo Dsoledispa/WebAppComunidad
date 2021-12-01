@@ -15,26 +15,26 @@ if ($_SESSION['email']=="") {
     <title>Document</title>
 </head>
 <body>
-<form action="../proceses/agregarvoluntario.php" method="post">
+<form action="../proceses/agregareventos.php" method="post">
         <div>
             <label for="nombre_evento">Nombre del evento</label><br>
             <input type="text" placeholder="Introduce el nombre" name="nombre_evento" class="casilla">
         </div>
         <div>
             <label for="lugar_evento">Lugar del evento</label><br>
-            <input type="text" placeholder="Introduce el apellido" name="lugar_evento" class="casilla">
+            <input type="text" placeholder="Introduce el lugar" name="lugar_evento" class="casilla">
         </div>
         <div>
             <label for="fecha_inicio_evento">Fecha inicio del evento</label><br>
-            <input type="date" placeholder="Introduce el correo" name="fecha_inicio_evento" class="casilla">
+            <input type="date" placeholder="Introduce la fecha de inicio" name="fecha_inicio_evento" class="casilla">
         </div>
         <div>
             <label for="fecha_final_evento">Fecha final del evento</label><br>
-            <input type="date" placeholder="Introduce el dni" name="fecha_final_evento" class="casilla">
+            <input type="date" placeholder="Introduce la fecha final" name="fecha_final_evento" class="casilla">
         </div>
         <div>
             <label for="descripcion">Descripcion del evento</label><br>
-            <input type="text" placeholder="Introduce la edad" name="descripcion" class="casilla">
+            <input type="text" placeholder="Descripcion" name="descripcion" class="casilla">
         </div>
         <div>
             <input type="submit" value="Enviar" name="filtrar" class="filtrar">
