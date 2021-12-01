@@ -55,11 +55,11 @@
                     }
                     //por si no llego mira la linea de abajo
                     //hay que procesar estas lineas por cada evento
-                    $dispo=$pdo->prepare("SELECT disponibilidad_evento FROM tbl_evento WHERE id_evento = 5;");
+                    /* $dispo=$pdo->prepare("SELECT disponibilidad_evento FROM tbl_evento WHERE id_evento = 5;");
                     $dispo->execute();
                     $dato=$dispo->fetch(PDO::FETCH_ASSOC);
-                    $datodispo = $dato['disponibilidad_evento'];
-                    $ubicacion=$pdo->prepare("SELECT * FROM tbl_evento WHERE disponibilidad_evento={$datodispo}");
+                    $datodispo = $dato['disponibilidad_evento']; */
+                    $ubicacion=$pdo->prepare("SELECT * FROM tbl_evento WHERE disponibilidad_evento=1");
                     $ubicacion->execute();
                     $listaoption=$ubicacion->fetchAll(PDO::FETCH_ASSOC);
 
@@ -75,11 +75,6 @@
             <input type="submit" value="Enviar" name="filtrar" class="filtrar">
         </div>
     </form>
-    <?php
-        $listaeventos=$pdo->prepare("SELECT id_evento FROM tbl_evento;");
-        $listaeventos->execute();
-        print_r($listaeventos);
-    ?>
 </body>
 
 </html>
