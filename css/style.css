@@ -7,6 +7,13 @@ body {
     margin: 0;
 }
 
+.three-column img {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+}
+
 label {
     font-weight: bold;
     font-size: 18px;
