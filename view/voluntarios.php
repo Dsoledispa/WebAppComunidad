@@ -40,11 +40,6 @@
 
                 <?php
                     require_once "../services/connection.php";
-                    //zona para todos los eventos
-                    /* $listaeventos=$pdo->prepare("SELECT id_evento FROM tbl_evento;");
-                    $listaeventos->execute(); */
-                    //zona para todos los eventos
-                    //si hay mas voluntarios que plazas para el evento, este se cierra
                     $contevento=$pdo->prepare("SELECT COUNT(*) FROM tbl_evento_voluntario GROUP BY id_evento HAVING id_evento=5;");
                     $contevento->execute();
                     $some=$contevento->fetch(PDO::FETCH_ASSOC);
@@ -53,13 +48,7 @@
                         $disponibilidad=$pdo->prepare("UPDATE tbl_evento SET disponibilidad_evento=0 WHERE id_evento=5;");
                         $disponibilidad->execute();
                     }
-                    //por si no llego mira la linea de abajo
-                    //hay que procesar estas lineas por cada evento
-                    /* $dispo=$pdo->prepare("SELECT disponibilidad_evento FROM tbl_evento WHERE id_evento = 5;");
-                    $dispo->execute();
-                    $dato=$dispo->fetch(PDO::FETCH_ASSOC);
-                    $datodispo = $dato['disponibilidad_evento']; */
-                    $ubicacion=$pdo->prepare("SELECT * FROM tbl_evento WHERE disponibilidad_evento=1");
+                    $ubicacion=$pdo->prepare("SELECT * FROM tbl_evento WHERE disponibilidad_evento=1;");
                     $ubicacion->execute();
                     $listaoption=$ubicacion->fetchAll(PDO::FETCH_ASSOC);
 
@@ -76,5 +65,4 @@
         </div>
     </form>
 </body>
-
 </html>

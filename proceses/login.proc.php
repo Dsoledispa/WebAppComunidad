@@ -15,11 +15,11 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 $_SESSION['email']=$email;
                 header("location:../view/zona.admin.php");
             }else {
-                header("location: ../view/index.html");
+                header("location: ../view/menu.php");
             }
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
 }else{
-    header("location: ../view/index.html");
+    header("location: ../view/menu.php");
 }

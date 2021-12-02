@@ -15,8 +15,8 @@ if ($_SESSION['email']=="") {
     <title>Document</title>
 </head>
 <body>
-    <button type="submit"><a type='button' href='index.html'>Volver a la pagina de inicio</a></button>
-    <button type="submit"><a type='button' href='eventos.php'>Crear eventos</a></button>
+    <button type="submit"><a type='button' href='menu.php'>Volver a la pagina de inicio</a></button>
+    <button type="submit"><a type='button' href='formularioeventos.php'>Crear eventos</a></button>
     <button type="submit"><a type='button' href="../proceses/logout.proc.php">Logout</a></button>
     <?php
     $sentencia1=$pdo->prepare("SELECT * FROM tbl_voluntario");

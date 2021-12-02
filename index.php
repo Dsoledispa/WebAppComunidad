@@ -1,2 +1,2 @@
 <?php
-header("Location:view/index.html");
+header("Location:view/menu.php");
