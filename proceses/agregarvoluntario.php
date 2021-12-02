@@ -22,11 +22,11 @@ if (isset($_POST['email'])) {
         if (empty($agregarvoluntario) && empty($idvoluntario) && empty($voluntarioevento)) {
             echo "No se ha ejecutado bien la sentencia";
         }else {
-            header('location:../view/index.html');
+            header('location:../view/menu.php');
         }
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
 }else {
-    header("location:../view/index.html");
+    header("location:../view/menu.php");
 }

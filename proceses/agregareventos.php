@@ -2,7 +2,7 @@
 session_start();
 require_once '../services/connection.php';
 if ($_SESSION['email']=="") {
-    header("location:../view/index.html");
+    header("location:../view/menu.php");
 }else {
     $nombre_evento=$_POST['nombre_evento'];
     $lugar_evento=$_POST['lugar_evento'];
