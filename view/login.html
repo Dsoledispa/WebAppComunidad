@@ -5,24 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="../css/login.css" rel="stylesheet">
     <title>Login Admin</title>
 </head>
 
 <body>
+
     <div>
         <form action="../proceses/login.proc.php" method="post">
-            <div>
-                <input type="email" name="email" placeholder="Introduce el correo" class="casilla">
-                <label>Correo electrónico</label>
+            <div class="wrapper fadeInDown">
+                <div id="formContent">
+                    <!-- Tabs Titles -->
+
+                    <!-- Icon -->
+                    <div class="fadeIn first">
+                        <img src="../img/logo.png" id="icon" alt="User Icon" />
+                    </div>
+
+                    <!-- Login Form -->
+                    <form>
+                        <input type="text" id="email" class="fadeIn second" name="email" placeholder="Correo electrónico">
+                        <input type="text" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
+                        <input type="submit" class="fadeIn fourth" value="Iniciar sesion">
+                    </form>
+
+
+
+                </div>
             </div>
-            <div>
-                <input type="password" name="password" placeholder="Password" class="casilla">
-                <label>Contraseña</label>
-            </div>
-            <button type="submit">Iniciar sesión</button>
         </form>
     </div>
+
 </body>
 
 </html>
