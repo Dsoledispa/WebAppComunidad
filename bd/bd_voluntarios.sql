@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-12-2021 a las 17:35:41
+-- Tiempo de generación: 03-12-2021 a las 17:55:21
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.24
 
@@ -44,7 +44,8 @@ CREATE TABLE `tbl_admin` (
 INSERT INTO `tbl_admin` (`id_admin`, `nombre_admin`, `apellido_admin`, `correo_admin`, `pass_admin`) VALUES
 (1, 'Diego', 'Soledispa', 'diegosoledispa@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
 (2, 'Cristian', 'Guerrero', 'cristianguerrero@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
-(3, 'Danny', 'Larrea', 'dannylarrea@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055');
+(3, 'Danny', 'Larrea', 'dannylarrea@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+(4, 'admin', 'admin', 'admin@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055');
 
 -- --------------------------------------------------------
 
@@ -163,7 +164,7 @@ ALTER TABLE `tbl_voluntario`
 -- AUTO_INCREMENT de la tabla `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_evento`
