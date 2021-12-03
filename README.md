@@ -59,8 +59,8 @@ Da un ejemplo
 
 _Datos necesarios para acceder a la administracion_
 
-*   *EMAIL* - **diegosoledispa@gmail.com** - *PASS* - **1234**
-*   *EMAIL* - **cristianguerrero@gmail.com** - *PASS* - **1234**
+*   *EMAIL* - **diegosoledispa@gmail.com** / *PASS* - **1234**
+*   *EMAIL* - **cristianguerrero@gmail.com** / *PASS* - **1234**
 
 
 ## Construido con 🛠️
