@@ -13,7 +13,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                     $_SESSION['nombre_admin']=$row['nombre_admin'];
                  }   
                 $_SESSION['email']=$email;
-                header("location:../view/zona.admin.php");
+                header("location:../view/zona.eventos.php");
             }else {
                 header("location: ../view/menu.php");
             }
