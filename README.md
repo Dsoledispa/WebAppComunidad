@@ -24,38 +24,32 @@ GitHub - https://github.com/
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-_Dí cómo será ese paso_
+_XAMPP_
 
 ```
-Da un ejemplo
+En XAMPP deberemos tener ejecutando los servicios de Apache y MySQL. Apache para poder ejecutar correctamente los archivos php y MySQL para eestar ejecutando la base de datos en PhpMyAdmin.
 ```
 
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+_Con estas sencillas ejecuciones ya podremos enviar y recibir datos de la base de datos_
 
 ## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+_Actualizando los perfiles de las personas inscritas_
 
 ### Analice las pruebas end-to-end 🔩
 
-_Explica que verifican estas pruebas y por qué_
+_Estas pruebas verifican que los datos se actualizan correctamente con la base de datos_
 
 ```
-Da un ejemplo
+Actualizando el correo electronico, DNI.. de cualquier usuario 
 ```
 
 ### Y las pruebas de estilo de codificación ⌨️
 
-_Explica que verifican estas pruebas y por qué_
+_Verifica que nuestra contraseña esta correctamente encriptada en MD5_
 
 ```
-Da un ejemplo
+Probando a entrar en el login con la contraseña encriptada
 ```
 
 ## Despliegue 📦
