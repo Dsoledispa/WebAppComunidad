@@ -14,7 +14,10 @@ Mira **Deployment** (Despliegue) para conocer como desplegar el proyecto.
 _Que cosas necesitas para instalar el software y como instalarlas_
 
 ```
-Da un ejemplo
+XAMPP - https://www.apachefriends.org/es/download.html
+Phpmyadmin - Viene incluido en el dashboard de nuestro localhost al instalar XAMPP
+Visual Studio Code (o cualquier editor de codigo) - https://code.visualstudio.com/download
+GitHub - https://github.com/
 ```
 
 ### Instalación 🔧
