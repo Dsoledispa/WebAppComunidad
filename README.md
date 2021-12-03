@@ -55,6 +55,13 @@ _Explica que verifican estas pruebas y por qué_
 Da un ejemplo
 ```
 
+## Despliegue 📦
+
+_Datos necesarios para acceder a la administracion_
+
+*   *EMAIL* - **diegosoledispa@gmail.com** - *PASS* - **1234**
+*   *EMAIL* - **cristianguerrero@gmail.com** - *PASS* - **1234**
+
 
 ## Construido con 🛠️
 
