@@ -1,6 +1,6 @@
-# Título del Proyecto
+# Web App Comunidad
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_Este proyecto trataba de montar una pagina web donde poder inscribirnos a eventos solidarios y guardar los datos en una base de datos._
 
 ## Comenzando 🚀
 
@@ -83,8 +83,9 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Andrés Villanueva** - *Trabajo Inicial* - [dannylarrea](https://github.com/dannylarrea)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
+* **Diego Sole** - *Trabajo Inicial* - [Diego](https://github.com/Dsoledispa)
+* **Cristian Guerrero** - *Trabajo inicial* - [Cristian](https://github.com/CristianGuerreroRioja)
+* **Jesucristo de Nazaret** - *Aporte de fe* - [JESUS](https://github.com/dannylarrea)
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
