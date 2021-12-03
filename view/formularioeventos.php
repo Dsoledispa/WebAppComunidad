@@ -15,7 +15,7 @@ if ($_SESSION['email']=="") {
     <title>Document</title>
 </head>
 <body>
-<form action="../proceses/agregareventos.php" method="post">
+<form action="../proceses/agregareventos.php" method="post" enctype="multipart/form-data">
         <div>
             <label for="nombre_evento">Nombre del evento</label><br>
             <input type="text" placeholder="Introduce el nombre" name="nombre_evento" class="casilla">
@@ -35,6 +35,10 @@ if ($_SESSION['email']=="") {
         <div>
             <label for="descripcion">Descripcion del evento</label><br>
             <input type="text" placeholder="Descripcion" name="descripcion" class="casilla">
+        </div>
+        <div>
+            <label for="file">Imagen del evento</label><br>
+            <input type="file" name="file" accept="image/*">
         </div>
         <div>
             <input type="submit" value="Enviar" name="filtrar" class="filtrar">

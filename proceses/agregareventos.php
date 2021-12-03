@@ -9,15 +9,23 @@ if ($_SESSION['email']=="") {
     $fecha_inicio_evento=$_POST['fecha_inicio_evento'];
     $fecha_final_evento=$_POST['fecha_final_evento'];
     $descripcion=$_POST['descripcion'];
-    $agregar=$pdo->prepare("INSERT INTO tbl_evento (nombre_evento, lugar_evento, fecha_inicio_evento, fecha_final_evento, descripcion, disponibilidad_evento) VALUES ('{$nombre_evento}', '{$lugar_evento}', '{$fecha_inicio_evento}', '{$fecha_final_evento}', '{$descripcion}', 1);");
-    try {
-        $agregar->execute();
-        if (empty($agregar)) {
-            echo "No se ha ejecutado bien la sentencia";
-        }else {
-            header('location:../view/zona.admin.php');
+    $path="../img/".date('h-i-s-j-m-y')."-".$_FILES['file']['name'];
+    $error=false;
+    if (move_uploaded_file($_FILES['file']['tmp_name'],$path)) {
+        try {
+            $agregar=$pdo->prepare("INSERT INTO tbl_evento (nombre_evento, lugar_evento, fecha_inicio_evento, fecha_final_evento, descripcion, path, disponibilidad_evento) VALUES ('{$nombre_evento}', '{$lugar_evento}', '{$fecha_inicio_evento}', '{$fecha_final_evento}', '{$descripcion}', '{$path}', 1);");
+            $agregar->execute();
+        } catch (\Throwable $th){
+            echo $th;
+            $error=true;
+            unlink($path);
         }
-    } catch (PDOException $e) {
-        echo $e->getMessage();
+        if ($error) {
+            header("Location:../view/zona.admin.php?error=1");
+        }else{
+            header("Location:../view/zona.admin.php");
+        }
+    }else {
+        header("Location:../view/zona.admin.php?error=1");
     }
 }

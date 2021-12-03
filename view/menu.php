@@ -14,9 +14,18 @@
     <button type="submit"><a type='button' href='voluntarios.php'>Acceder al formulario</a></button>
 <br><br><br>
 <div class="row">
-    <div class="three-column" ><a href="./voluntarios.php"><img src="../img/alimentos.png"></a></div>
-    <div class="three-column"><a href="./voluntarios.php"><img src="../img/carrera.png"></a></div>
-    <div class="three-column"><a href="./voluntarios.php"><img src="../img/sangre.png"></a></div>
+    <?php
+    require_once '../services/connection.php';
+    $stmt=$pdo->prepare("SELECT * FROM tbl_evento where disponibilidad_evento=1");
+    $stmt->execute();
+    foreach ($stmt as $row) {
+        echo "<div class='three-column'>";
+        echo "<a href='voluntarios.php?id_evento={$row['id_evento']}'>";
+        echo "<img src='".$row['path']."'alt='Fallo en la carga de base de datos'>";
+        echo "</a>";
+        echo "</div>";
+    }
+    ?>
 </div>
 
 
