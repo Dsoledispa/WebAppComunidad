@@ -13,7 +13,7 @@ if ($_SESSION['email']=="") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <title>Zona eventos</title>
+    <title>Zona de eventos</title>
 </head>
 <body>
     <button type="submit"><a type='button' href='formularioeventos.php'>Crear eventos</a></button>
