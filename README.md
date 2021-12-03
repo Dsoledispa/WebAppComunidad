@@ -68,6 +68,7 @@ _Herramientas utilizadas para crear el proyecto_
 ## Versionado 📌
 
 Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+
 Nuestra version del proyecto es 0.1.34
 
 ## Autores ✒️
