@@ -66,13 +66,14 @@
                                 <input type="text" class="form-control" name="telf" placeholder="Introduce tu numero de telefono"/>
                             </div>
                     </div>
-                    <input type="hidden" name="id_evento" value="<?php $_GET['id_evento'] ?>">
+                    <?php
+                        $id_evento=$_GET['id_evento'];
+                        echo "<input type='hidden' name='id_evento' value=$id_evento>";
+                    ?>
                     <button type="submit">ENVIAR</button> <!-- ENVIAR NUEVO (BOOTSTRAP) -->   
                 </form>
 			</div><!--main-center"-->
 		</div><!--main-->
 	</div><!--container-->
-
-    
 </body>
 </html>
