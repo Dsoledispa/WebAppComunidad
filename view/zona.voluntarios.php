@@ -12,10 +12,9 @@ if ($_SESSION['email']=="") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/style.css" rel="stylesheet">
-    <title>Zona voluntarios</title>
+    <title>Zona para voluntarios</title>
 </head>
 <body>
-    <button type="submit"><a type='button' href='formularioeventos.php'>Crear eventos</a></button>
     <button type="submit"><a type='button' href='zona.eventos.php'>Acceder a eventos</a></button>
     <button type="submit"><a type='button' href="../proceses/logout.proc.php">Logout</a></button>
     <?php
