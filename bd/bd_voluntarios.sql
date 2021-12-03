@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-12-2021 a las 17:14:24
+-- Tiempo de generación: 03-12-2021 a las 17:35:41
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.24
 
@@ -43,7 +43,8 @@ CREATE TABLE `tbl_admin` (
 
 INSERT INTO `tbl_admin` (`id_admin`, `nombre_admin`, `apellido_admin`, `correo_admin`, `pass_admin`) VALUES
 (1, 'Diego', 'Soledispa', 'diegosoledispa@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
-(2, 'Cristian', 'Guerrero', 'cristianguerrero@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055');
+(2, 'Cristian', 'Guerrero', 'cristianguerrero@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+(3, 'Danny', 'Larrea', 'dannylarrea@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055');
 
 -- --------------------------------------------------------
 
@@ -58,6 +59,7 @@ CREATE TABLE `tbl_evento` (
   `fecha_inicio_evento` date NOT NULL,
   `fecha_final_evento` date NOT NULL,
   `descripcion` text NOT NULL,
+  `path` varchar(100) NOT NULL,
   `disponibilidad_evento` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -65,11 +67,12 @@ CREATE TABLE `tbl_evento` (
 -- Volcado de datos para la tabla `tbl_evento`
 --
 
-INSERT INTO `tbl_evento` (`id_evento`, `nombre_evento`, `lugar_evento`, `fecha_inicio_evento`, `fecha_final_evento`, `descripcion`, `disponibilidad_evento`) VALUES
-(3, 'Campaña recogida alimentos', 'Ermita Bellvitge', '2021-11-25', '2021-11-28', 'Campaña recogida alimentos 2021', 1),
-(4, 'Cursa solidaria', 'Feixa Llarga', '2021-11-26', '2021-11-29', 'Cursa solidaria 2021', 1),
-(5, 'Campaña donacion sangre', 'Av europa', '2021-11-27', '2021-12-01', 'Campaña donacion sangre 2021', 0),
-(8, 'Algo', 'Bellvitge', '2021-12-04', '2021-12-11', '2345', 1);
+INSERT INTO `tbl_evento` (`id_evento`, `nombre_evento`, `lugar_evento`, `fecha_inicio_evento`, `fecha_final_evento`, `descripcion`, `path`, `disponibilidad_evento`) VALUES
+(3, 'Campaña recogida alimentos', 'Ermita Bellvitge', '2021-11-25', '2021-11-28', 'Campaña recogida alimentos 2021', '../img/alimentos.png', 1),
+(4, 'Cursa solidaria', 'Feixa Llarga', '2021-11-26', '2021-11-29', 'Cursa solidaria 2021', '../img/carrera.png', 1),
+(5, 'Campaña donacion sangre', 'Av europa', '2021-11-27', '2021-12-01', 'Campaña donacion sangre 2021', '../img/sangre.png', 0),
+(9, 'Cursa de la once', 'Bellvitge', '2021-12-13', '2021-12-18', 'Cursa para apoyar a los discapacitados', '../img/05-31-41-3-12-21-cursaonce.jpg', 1),
+(13, 'Recaudacion de fondos para niños', 'Barcelona', '2021-12-21', '2021-12-25', 'Para los niños en riesgo de exclusión social', '../img/05-28-24-3-12-21-money.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -88,10 +91,11 @@ CREATE TABLE `tbl_evento_voluntario` (
 --
 
 INSERT INTO `tbl_evento_voluntario` (`id_evento_voluntario`, `id_evento`, `id_voluntario`) VALUES
-(1, 8, 4),
 (2, 5, 8),
 (3, 5, 26),
-(4, 5, 27);
+(4, 5, 27),
+(5, 4, 34),
+(7, 4, 35);
 
 -- --------------------------------------------------------
 
@@ -115,13 +119,11 @@ CREATE TABLE `tbl_voluntario` (
 --
 
 INSERT INTO `tbl_voluntario` (`id_voluntario`, `nombre_voluntario`, `apellido_voluntario`, `correo_voluntario`, `dni_voluntario`, `edad_voluntario`, `telf_voluntario`, `habilitado_voluntario`) VALUES
-(1, 'Carlos', 'Piedras', 'carlospiedras@gmail.com', '42757394V', 21, 646735753, 1),
-(2, 'Miquel', 'Gras', 'miquelgras@gmail.com', '42757386R', 20, 646739453, 1),
-(3, 'Pepe', 'Garcia', 'pepegarcia@gmail.com', '57846735N', 50, 743456324, 1),
-(4, 'prueba', 'prueba', 'prueba@gmail.com', '46488728P', 22, 678356976, 1),
 (8, 'Javi', 'Calderon', 'javicalderon@gmail.com', '57846735N', 22, 654345654, 1),
-(26, 'Carla', 'Ortega', 'carlaortega@gmail.com', '47663672L', 23, 675876543, 1),
-(27, 'Pedro', 'Lopez', 'pedrolopez@gmail.com', '46478765J', 40, 675876354, 1);
+(26, 'Lizbeth', 'Gonzalez', 'lizbethgonzalez@gmail.com', '57846739N', 40, 657896743, 1),
+(27, 'Pedro', 'Lopez', 'pedrolopez@gmail.com', '46478765J', 40, 675876354, 1),
+(34, 'John', 'Soledispa', 'johnsoledispa@gmail.com', '57846735N', 22, 654567435, 1),
+(35, 'Carlos', 'Pe', 'carlospe@gmail.com', '46478976E', 30, 657876543, 1);
 
 --
 -- Índices para tablas volcadas
@@ -161,25 +163,25 @@ ALTER TABLE `tbl_voluntario`
 -- AUTO_INCREMENT de la tabla `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_evento`
 --
 ALTER TABLE `tbl_evento`
-  MODIFY `id_evento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_evento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_evento_voluntario`
 --
 ALTER TABLE `tbl_evento_voluntario`
-  MODIFY `id_evento_voluntario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_evento_voluntario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_voluntario`
 --
 ALTER TABLE `tbl_voluntario`
-  MODIFY `id_voluntario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_voluntario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- Restricciones para tablas volcadas

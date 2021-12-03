@@ -15,7 +15,6 @@ if ($_SESSION['email']=="") {
     <title>Zona voluntarios</title>
 </head>
 <body>
-    <button type="submit"><a type='button' href='formularioeventos.php'>Crear eventos</a></button>
     <button type="submit"><a type='button' href='zona.eventos.php'>Acceder a eventos</a></button>
     <button type="submit"><a type='button' href="../proceses/logout.proc.php">Logout</a></button>
     <?php
