@@ -21,11 +21,11 @@ if ($_SESSION['email']=="") {
             unlink($path);
         }
         if ($error) {
-            header("Location:../view/zona.admin.php?error=1");
+            header("Location:../view/zona.eventos.php?error=1");
         }else{
-            header("Location:../view/zona.admin.php");
+            header("Location:../view/zona.eventos.php");
         }
     }else {
-        header("Location:../view/zona.admin.php?error=1");
+        header("Location:../view/zona.eventos.php?error=1");
     }
 }
